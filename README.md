@@ -1,5 +1,8 @@
 # snake-game
 
+## Live Demo
+[See demo](https://trophysnake.netlify.app).
+
 ## Project setup
 ```
 npm install

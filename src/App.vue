@@ -1,34 +1,39 @@
 <template>
   <div id="app">
     <!-- Title -->
-    <h1 class="game-title">{{ title }}</h1>
+    <div class="game">
+      <h1 class="game-title">{{ title }}</h1>
+      <div class="game-info">
+        <!-- Current Score -->
+        <p class="game-info__score">
+          <b>SCORE</b> <br />{{ this.$store.getters.player.score }}
+        </p>
 
-    <div class="game-info">
-      <!-- Current Score -->
-      <p class="game-info__score">
-        <b>SCORE</b> <br />{{ this.$store.state.player.score }}
-      </p>
+        <!-- Player Name  -->
+        <p class="game-info__player">
+          <b>PLAYER</b> <br />{{ this.$store.getters.player.name }}
+        </p>
 
-      <!-- Player Name  -->
-      <p class="game-info__player">
-        <b>PLAYER</b> <br />{{ this.$store.state.player.name }}
-      </p>
+        <!-- Time Elapsed -->
+        <p class="game-info__time">
+          <b>TIME</b> <br />{{ this.$store.getters.elapsedTime }}
+        </p>
+      </div>
 
-      <!-- Time Elapsed -->
-      <p class="game-info__time">
-        <b>TIME</b> <br />{{ this.$store.state.elapsedTime }}
-      </p>
+      <!-- Game Window -->
+      <GameWindow />
     </div>
 
-    <!-- Game Window -->
-    <GameWindow />
-
-    <!-- Highscores: Top 10 -->
+    <div class="score">
+      <!-- Highscores: Top 10 -->
+      <HighscoreList />
+    </div>
   </div>
 </template>
 
 <script>
 import GameWindow from "./components/GameWindow.vue";
+import HighscoreList from "./components/HighscoreList.vue";
 
 export default {
   name: "App",
@@ -46,6 +51,7 @@ export default {
   },
   components: {
     GameWindow,
+    HighscoreList,
   },
 };
 </script>
@@ -61,11 +67,14 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: #2c3e50;
+  display: flex;
+  margin: 32px auto 48px auto;
+  justify-content: center;
 }
 .game-title {
   text-align: center;
   width: 600px;
-  margin: 2rem auto 1rem auto;
+  margin: 0 auto 1rem auto;
 }
 .game-info {
   width: 600px;

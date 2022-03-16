@@ -2,7 +2,7 @@
 Trophy Games Test
 
 ## Live Demo
-Spillet kan ses live herunder:
+Spillet kan ses live her:
 [Se demo](https://trophysnake.netlify.app).
 
 ## Project setup

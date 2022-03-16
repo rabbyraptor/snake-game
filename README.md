@@ -1,4 +1,5 @@
-# snake-game
+# Snake Game
+Trophy Games Test
 
 ## Live Demo
 Spillet kan ses live herunder:

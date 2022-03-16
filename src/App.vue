@@ -1,29 +1,25 @@
 <template>
   <div id="app">
-    <!-- Title -->
     <div class="game">
+      <!-- Title -->
       <h1 class="game-title">{{ title }}</h1>
       <div class="game-info">
         <!-- Current Score -->
         <p class="game-info__score">
           <b>SCORE</b> <br />{{ this.$store.getters.player.score }}
         </p>
-
         <!-- Player Name  -->
         <p class="game-info__player">
           <b>PLAYER</b> <br />{{ this.$store.getters.player.name }}
         </p>
-
         <!-- Time Elapsed -->
         <p class="game-info__time">
           <b>TIME</b> <br />{{ this.$store.getters.elapsedTime }}
         </p>
       </div>
-
       <!-- Game Window -->
       <GameWindow />
     </div>
-
     <div class="score">
       <!-- Highscores: Top 10 -->
       <HighscoreList />
@@ -41,13 +37,6 @@ export default {
     return {
       title: "Snake",
     };
-  },
-  methods: {
-    // PLAYER NAME
-    // Create input prompt
-    // Set player.name = user input
-    // PLAYER CONTROLS
-    // Set arrow keys and WASD controls
   },
   components: {
     GameWindow,

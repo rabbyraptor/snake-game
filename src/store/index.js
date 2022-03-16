@@ -1,8 +1,8 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 const request = require("axios");
-const endpoint = "mBqKR5zX";
-const token = "4jU9UPNM5tu4upDtVz442g";
+const endpoint = "xootPW2D";
+const token = "yn8OqHrHiJMbsus732sbGw";
 
 Vue.use(Vuex)
 
